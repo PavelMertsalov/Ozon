@@ -30,12 +30,16 @@ public class Ozon {
         Assert.assertTrue(driver.findElement(By.xpath("//label[@for='address']")).isDisplayed());
 
 
-        Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[1]")).getText(),"Обязательно к заполнению");//Под всеми полями используется пояснение: “Обязательно к заполнению”
-        Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[2]")).getText(),"Обязательно к заполнению");
-        Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[3]")).getText(),"Обязательно к заполнению");
-        Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[4]")).getText(),"Обязательно к заполнению");
-        Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[5]")).getText(),"Обязательно к заполнению");
-        Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[6]")).getText(),"Обязательно к заполнению");
+        //Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[1]")).getText(),"Обязательно к заполнению");//Под всеми полями используется пояснение: “Обязательно к заполнению”
+        //Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[2]")).getText(),"Обязательно к заполнению");
+        //Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[3]")).getText(),"Обязательно к заполнению");
+        //Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[4]")).getText(),"Обязательно к заполнению");
+        //Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[5]")).getText(),"Обязательно к заполнению");
+        //Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[6]")).getText(),"Обязательно к заполнению");
+
+        for(int i = 1; i < 7; i++){
+            Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='ozon-box-form__validation-text'])[" + i + "]")).getText(),"Обязательно к заполнению");
+        }
 
         Assert.assertTrue(driver.findElement(By.xpath("//div[@class='ozon-box-form__btn-wrapper']//button[contains(@class,'ozon-box-form__btn js-submit')]")).isDisplayed()); //кнопка активна
 
@@ -44,7 +48,7 @@ public class Ozon {
 
         Thread.sleep(1000);
 
-        Assert.assertTrue(driver.findElement(By.xpath("//div[contains(@class,'item--error')]//label[@for='name']")).isDisplayed()); //
+        Assert.assertTrue(driver.findElement(By.xpath("//div[contains(@class,'item--error')]//label[@for='name']")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.xpath("//div[contains(@class,'item--error')]//label[@for='postamats']")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.xpath("//div[contains(@class,'item--error')]//label[@for='phone']")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.xpath("//div[contains(@class,'item--error')]//label[@for='email']")).isDisplayed());
