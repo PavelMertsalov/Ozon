@@ -60,10 +60,10 @@ public class Ozon {
 
         Assert.assertTrue(driver.findElement(By.xpath("//div[contains(@class,'btn-wrapper--invalid')]//button[@class='ozon-box-form__btn js-submit']")).isDisplayed());
 
-        //driver.findElement(Name).sendKeys("Иван Иванов"); //корректно заполнены поля
-        //driver.findElement(Postomats).sendKeys("1");
-        //driver.findElement(By.xpath("//div[contains(@class,'item--error')]//label[@for='phone']")).sendKeys("9999999999");
-        //driver.findElement(By.xpath("//div[contains(@class,'item--error')]//label[@for='email']")).sendKeys("ИванИванов@yandex.ru");
+        driver.findElement(Name).sendKeys("Иван Иванов"); //корректно заполнены поля
+        driver.findElement(Postomats).sendKeys("1");
+        driver.findElement(By.xpath("//div[contains(@class,'item--error')]//label[@for='phone']")).sendKeys("9999999999");
+        driver.findElement(By.xpath("//div[contains(@class,'item--error')]//label[@for='email']")).sendKeys("ИванИванов@yandex.ru");
         driver.findElement(City).sendKeys("к");
         Thread.sleep(500);
         driver.findElement(City).sendKeys("у");
