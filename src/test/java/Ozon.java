@@ -41,7 +41,7 @@ public class Ozon {
 
     //Тест телефона
 
-    private final String PHONENUMBERMIN = "1234567891";//10 цифр
+    private final String PHONENUMBERMIN = "1234567891";//10 цифр1
     private final String PHONENUMBERMAX = "12345678910";//11 цифр
 
 
