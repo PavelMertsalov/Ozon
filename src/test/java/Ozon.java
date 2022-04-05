@@ -41,14 +41,25 @@ public class Ozon {
 
     //Тест телефона
 
-    private final String PHONENUMBERMIN = "1234567891";//10 цифр1
-    private final String PHONENUMBERMAX = "12345678910";//11 цифр
+    private final String PHONENUMBERMIN = "1234567891";//10 цифр
+    private final String PHONENUMBER = "12345678910";//11 цифр
+    private final String PHONENUMBERMAX = "123456789101";//12 цифр
+    private final String PHONENUMBER7 = "+79999999999";//+7
+    private final String PHONENUMBER8 = "89999999999";//8
+
+    //Тест Email
+
+    private final String EMAIL = "Email@gmail.com";//смешанный регистр
+    private final String EMAILNUMBER25 = "1234567890123456789012345@gmail.com";//25 цифр в имени
+    private final String EMAILNUMBER1 = "e@gmail.com";//1 буква в имени нижний регистр
+    private final String EMAILNUMBER10 = "EMAILEMAIL@gmail.com";//10 букв в имени верхний регистр
+    private final String EMAILDOG = "emailgmail.com";// без@
+    private final String EMAILDOT = "emai@lgmailcom";// без точки
+    private final String EMAILDOMENRUS = "email@домен.рф";// кириллица в домене
+    private final String EMAILNODOMEN = "email@";// без домена
 
 
     //private final long NUMBER18 = 922337203685477580L;
-
-
-    //private final char group = 'Z';
 
 
     @Test
